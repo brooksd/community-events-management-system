@@ -73,4 +73,40 @@ class ApplicationController < Sinatra::Base
     delete_user.destroy
     delete_user.to_json
   end
+
+  #reviews routes
+  
+  get '/reviews' do
+    get_reviews = Review.all.order(:asc)
+    get_reviews.to_json 
+  end
+
+  get '/reviews/:id' do 
+    get_reviews_by_id = Review.find(params[:id])
+    get_reviews_by_id.to_json
+  end
+
+  post '/reviews' do
+    new_review = Review.create(
+      name: params[:name], 
+      review: params[:review]
+    )
+    new_review.to_json
+  end
+
+  patch '/review/:id' do
+    patch_review = Review.find(params[:id])
+    patch_review.update(
+      name: params[:name], 
+      review: params[:review]
+    )
+    patch_review.to_json
+  end
+
+  delete '/review/:id' do
+    delete_review = Review.find(params[:id])
+    delete_review.destroy
+    delete_review.to_json
+  end
+
 end
