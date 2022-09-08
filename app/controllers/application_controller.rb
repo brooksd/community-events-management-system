@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
     { message: "Good luck with your project!" }.to_json
   end
 
-  #events
+  #events routes
   get '/events' do
     get_events = Event.all.order(:asc)
     get_events.to_json 
@@ -17,8 +17,8 @@ class ApplicationController < Sinatra::Base
     get_event_by_id.to_json
   end
 
-  post 'events' do
-    new_event = Entry.create(
+  post '/events' do
+    new_event = Event.create(
       title: params[:title], image_url: params[:image_url], event_description: params[:event_description],
       user_id: params[:user_id]
     )
@@ -38,5 +38,39 @@ class ApplicationController < Sinatra::Base
     delete_event = Event.find(params[:id])
     delete_event.destroy
     delete_event.to_json
+  end
+
+  #users routes
+  get '/users' do
+    get_users = User.all.order(:asc)
+    get_users.to_json 
+  end
+
+  get '/users/:id' do 
+    get_user_by_id = User.find(params[:id])
+    get_user_by_id.to_json
+  end
+
+  post '/users' do
+    new_user = User.create(
+      name: params[:name], email: params[:email], 
+      password: params[:password]
+    )
+    new_user.to_json
+  end
+
+  patch '/users/:id' do
+    patch_user = User.find(params[:id])
+    patch_user.update(
+      name: params[:name], email: params[:email], 
+      password: params[:password]
+    )
+    patch_user.to_json
+  end
+
+  delete '/users/:id' do
+    delete_user = User.find(params[:id])
+    delete_user.destroy
+    delete_user.to_json
   end
 end
