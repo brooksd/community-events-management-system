@@ -34,9 +34,9 @@ gem "sqlite3", "~> 1.4"
 # Require all files in a folder
 gem "require_all", "~> 3.0"
 
-gem "bcrypt"
-
 gem "tux"
+
+gem "bcrypt"
 
 gem "shotgun"
 
