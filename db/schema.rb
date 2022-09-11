@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 2022_09_07_170606) do
 
   create_table "events", force: :cascade do |t|
+    t.string "address"
+    t.text "description"
+    t.string "image"
+    t.boolean "isFavorite"
     t.string "title"
-    t.string "image_url"
-    t.text "event_description"
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "user_id"
   end
 
   create_table "reviews", force: :cascade do |t|

@@ -19,8 +19,8 @@ class ApplicationController < Sinatra::Base
 
   post '/events' do
     new_event = Event.create(
-      title: params[:title], image_url: params[:image_url], event_description: params[:event_description],
-      user_id: params[:user_id]
+      address: params[:address], description: params[:description], image: params[:image],
+      isFavorite: params[:isFavorite], title: params[:title]
     )
     new_event.to_json
   end
@@ -28,8 +28,8 @@ class ApplicationController < Sinatra::Base
   patch '/events/:id' do
     patch_event = Event.find(params[:id])
     patch_event.update(
-      title: params[:title], image_url: params[:image_url], event_description: params[:event_description],
-      user_id: params[:user_id]
+      address: params[:address], description: params[:description], image: params[:image],
+      isFavorite: params[:isFavorite], title: params[:title]
     )
     patch_event.to_json
   end
