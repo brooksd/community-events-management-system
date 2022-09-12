@@ -16,5 +16,6 @@ production:
   host: ec2-54-204-241-136.compute-1.amazonaws.com
   database: d76qkmqbr18fg2  
   user: pjedkkajxgtqtx
+  port: 5432
   password: e71281b98b5c7a00eb55a5597269218ede04924bec663d341de0c868ee27b3fb
 
