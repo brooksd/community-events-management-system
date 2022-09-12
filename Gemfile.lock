@@ -35,9 +35,12 @@ GEM
     minitest (5.14.4)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    pg (1.4.3)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    psych (4.0.5)
+      stringio
     rack (2.2.3)
     rack-contrib (2.3.0)
       rack (~> 2.0)
@@ -90,6 +93,7 @@ GEM
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
     sqlite3 (1.4.2)
+    stringio (3.0.2)
     thin (1.8.1)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -112,7 +116,9 @@ DEPENDENCIES
   activerecord (~> 6.1)
   bcrypt
   database_cleaner (~> 2.0)
+  pg
   pry (~> 0.14.1)
+  psych
   rack-contrib (~> 2.3)
   rack-cors (~> 1.1)
   rack-test (~> 1.1)
@@ -125,7 +131,7 @@ DEPENDENCIES
   sinatra (~> 2.1)
   sinatra-activerecord (~> 2.0)
   sinatra-flash
-  sqlite3 (~> 1.4)
+  sqlite3
   thin (~> 1.8)
   tux
 
