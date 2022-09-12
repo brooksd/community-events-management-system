@@ -1,5 +1,5 @@
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -12,8 +12,9 @@ test:
   database: db/test.sqlite3
 
 production:
-  Host: ec2-44-209-158-64.compute-1.amazonaws.com
-  Database: d57sdhkj8ao4di  
-  User: tpiaagduwhkhjq
-  Password: 90dc2a016d1c4c31a4bd25952c592e8ddc4870fb1da86f705f664622a34969ee
+  <<: *default
+  host: ec2-44-209-158-64.compute-1.amazonaws.com
+  database: d57sdhkj8ao4di  
+  user: tpiaagduwhkhjq
+  password: 90dc2a016d1c4c31a4bd25952c592e8ddc4870fb1da86f705f664622a34969ee
 
