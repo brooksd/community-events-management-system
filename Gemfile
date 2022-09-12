@@ -49,7 +49,7 @@ gem "sinatra-flash"
 group :development do
   gem "pry", "~> 0.14.1"
 
-  gem "sqlite3",
+  #gem "sqlite3",
 
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
