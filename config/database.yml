@@ -12,7 +12,8 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: db/production
-  host: <%= ENV[‘RACK_ENV’] %>
+  Host: ec2-44-209-158-64.compute-1.amazonaws.com
+  Database: d9b3ib05l385v4
+  User: ywvdarymnyzaap
+  Password: b69bec3c03a7e0488528e598ee9b9d4a7b83675d23d2f7a2c4432ec54ee25aa4
+
