@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
 
   #events routes
   get '/events' do
-    get_events = Event.all.order(:asc)
+    get_events = Event.all
     get_events.to_json 
   end
 
@@ -60,7 +60,7 @@ class ApplicationController < Sinatra::Base
 
   #users routes
   get '/users' do
-    get_users = User.all.order(:asc)
+    get_users = User.all
     get_users.to_json 
   end
 
@@ -95,7 +95,7 @@ class ApplicationController < Sinatra::Base
   #reviews routes
   
   get '/reviews' do
-    get_reviews = Review.all.order(:asc)
+    get_reviews = Review.all
     get_reviews.to_json 
   end
 
