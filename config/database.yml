@@ -13,7 +13,7 @@ test:
 
 production:
   Host: ec2-44-209-158-64.compute-1.amazonaws.com
-  Database: d9b3ib05l385v4
-  User: ywvdarymnyzaap
-  Password: b69bec3c03a7e0488528e598ee9b9d4a7b83675d23d2f7a2c4432ec54ee25aa4
+  Database: d57sdhkj8ao4di  
+  User: tpiaagduwhkhjq
+  Password: 90dc2a016d1c4c31a4bd25952c592e8ddc4870fb1da86f705f664622a34969ee
 
