@@ -13,4 +13,6 @@ test:
 
 production:
   adapter: postgresql
-  database: db/production.sqlite3
+  encoding: unicode
+  database: db/production
+  host: <%= ENV[‘DATABASE_HOST’] %>
